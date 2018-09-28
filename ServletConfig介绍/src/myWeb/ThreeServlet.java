@@ -9,8 +9,14 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 
-public class FirstServlet implements Servlet {
-
+public class ThreeServlet implements Servlet {
+	
+	public ThreeServlet() {
+		System.out.println("threeServlet 被创建了");
+	}
+	
+	
+	private String name;
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
@@ -30,9 +36,10 @@ public class FirstServlet implements Servlet {
 	}
 
 	@Override
-	public void init(ServletConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
-
+	public void init(ServletConfig config) throws ServletException {
+		this.name = config.getInitParameter("param_name");
+		System.out.println(this.name + "=====");
+		
 	}
     
 	/**
@@ -41,8 +48,7 @@ public class FirstServlet implements Servlet {
 	 */
 	@Override
 	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
-			System.out.println("============");
-			System.out.println(this);
+			System.out.println(this.name);
 	}
 
 }

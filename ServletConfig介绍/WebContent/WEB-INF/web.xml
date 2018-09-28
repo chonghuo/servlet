@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  
+  
+  
+  <servlet>
+    <servlet-name>firstServlet</servlet-name>
+    <servlet-class>myWeb.FirstServlet</servlet-class>
+    <init-param>
+    	<param-name>param_name</param-name>
+    	<param-value>mike</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>firstServlet</servlet-name>
+    <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>twoServlet</servlet-name>
+    <servlet-class>myWeb.TwoServlet</servlet-class>
+    <init-param>
+    	<param-name>param_name</param-name>
+    	<param-value>mike</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>twoServlet</servlet-name>
+    <url-pattern>/two</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>threeServlet</servlet-name>
+    <servlet-class>myWeb.ThreeServlet</servlet-class>
+    <init-param>
+    	<param-name>param_name</param-name>
+    	<param-value>mike</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>threeServlet</servlet-name>
+    <url-pattern>/three</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

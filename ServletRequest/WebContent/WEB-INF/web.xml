@@ -8,4 +8,4 @@
     <servlet-name>firstServlet</servlet-name>
     <url-pattern>/first</url-pattern>
   </servlet-mapping>
-  </web-app>
+</web-app>

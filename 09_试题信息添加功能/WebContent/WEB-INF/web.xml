@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  
+  
+  <!-- 
+       第一步:为当前Servlet实现类在工程内部设置一个别名
+   -->
+   <servlet>
+      <servlet-name>QuestionAddServlet</servlet-name><!-- 别名 -->
+      <servlet-class>com.bjpowernode.servlet.QuestionAddServlet</servlet-class><!-- servlet实现类真实名称 -->
+       
+      
+   </servlet>
+   
+   <!-- 
+           第二步:为Servlet的别名设置一个请求路径名称
+           为什么在请求路径名称前加"/"  
+           用户发送请求   :    http://localhost:8080/myWeb/first 
+     Tomcat如何解析:
+                 从最后一个斜线位置开始截取资源路径名称 [/first]           
+    -->
+    <servlet-mapping>
+       <servlet-name>QuestionAddServlet</servlet-name>
+       <url-pattern>/questionAdd</url-pattern>
+    </servlet-mapping>
+    
+   
+    
+    
+    
+    
+    
+</web-app>

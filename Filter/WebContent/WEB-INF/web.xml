@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	
+	<!-- 被保护的资源 -->
+	<servlet>
+		<servlet-name>firstServlet</servlet-name>
+		<servlet-class>com.bjpowernode.servlet.FirstServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>firstServlet</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 声明过滤器 -->
+	<filter>
+		<filter-name>myFilter</filter-name>
+		<filter-class>com.bjpowernode.filter.MyFilter</filter-class>
+	</filter>
+	<!-- 指定过滤器拦截资源路径 -->
+	<filter-mapping>
+		<filter-name>myFilter</filter-name>
+		<url-pattern>/first</url-pattern>
+	</filter-mapping>
+</web-app>

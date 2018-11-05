@@ -8,7 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class MyFilter implements Filter{
+public class MotherFilter implements Filter{
 	
 	/*
 	 * doFilter方法
@@ -23,12 +23,12 @@ public class MyFilter implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		//获取用户的年龄
-		 String age = request.getParameter("age");
+		 String sal = request.getParameter("sal");
 		 //判断用户的年龄
-		 if(Integer.valueOf(age)<18) {
+		 if(Integer.valueOf(sal)<=20000) {
 			//非法请求,由过滤终止本次请求
 			 response.setCharacterEncoding("GBK");
-			 response.getWriter().write("您的年龄不符合");
+			 response.getWriter().write("再去涨涨工资");
 		 }else {//合法请求.将拦截[request]和[response]输送给目标文件
 			 chain.doFilter(request, response);
 		 }

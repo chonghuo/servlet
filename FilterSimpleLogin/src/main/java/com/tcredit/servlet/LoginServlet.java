@@ -34,8 +34,7 @@ public class LoginServlet extends GenericServlet {
             session.setAttribute("用户","mike");
             req.getRequestDispatcher("/project").forward(req,res);
         }else {
-            res.setCharacterEncoding("GBK");
-            res.getWriter().write("您的身份不合法");
+            req.getRequestDispatcher("login.html").forward(req,res);
 
         }
 
